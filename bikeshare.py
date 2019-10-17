@@ -179,6 +179,6 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
+# check whether this module is the main program
 if __name__ == "__main__":
 	main()
