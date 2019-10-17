@@ -10,6 +10,8 @@ OPTIONS = { 'cities': ['chicago', 'new york city', 'washington'],
             'months': ['all', 'january', 'february', 'march', 'april', 'may', 'june'],
             'days': ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] }
 
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -62,8 +64,7 @@ def load_data(city, month, day):
     # filter by month of applicable
     if month != 'all':
         # use the index of months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
+        month = MONTHS.index(month) + 1
         
         # filter by month to get the new dataframe
         df = df[df['month'] == month]
