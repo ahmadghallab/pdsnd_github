@@ -16,3 +16,6 @@ In this project, I've made use of Python to explore data related to bike share s
 ## Third-Party Libraries
 - pandas
 - numpy
+
+## Authors
+- Ahmad Ghallab
