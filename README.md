@@ -13,9 +13,9 @@ In this project, I've made use of Python to explore data related to bike share s
 - new_york_city.csv
 - washington.csv
 
-## Third-Party Libraries
+### Third-Party Libraries
 - pandas
 - numpy
 
-## Authors
+### Authors
 - Ahmad Ghallab
