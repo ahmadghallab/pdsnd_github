@@ -10,6 +10,8 @@ OPTIONS = { 'cities': ['chicago', 'new york city', 'washington'],
             'months': ['all', 'january', 'february', 'march', 'april', 'may', 'june'],
             'days': ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] }
 
+MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -38,7 +40,6 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -64,8 +65,7 @@ def load_data(city, month, day):
     # filter by month of applicable
     if month != 'all':
         # use the index of months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
+        month = MONTHS.index(month) + 1
         
         # filter by month to get the new dataframe
         df = df[df['month'] == month]
@@ -76,7 +76,6 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
         
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -100,7 +99,6 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -120,7 +118,6 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -137,7 +134,6 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -163,7 +159,6 @@ def user_stats(df):
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def main():
     while True:
