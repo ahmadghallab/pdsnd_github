@@ -26,10 +26,12 @@ def get_filters():
         city = input('Please enter valid city. (chicago, new york city, washington)\n')
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input('Which month? all, january, february, march, april, may, or june?\n').lower()
+    # keep asking for month until a valid month is entered
     while month not in OPTIONS['months']:
         month = input('Please enter valid month. (all, january, february, march, april, may, or june)\n')
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Which day? all, monday, tuesday, wednesday, thursday, friday, saturday, or sunday?\n').lower()
+    # keep asking for day until a valid day is entered
     while day not in OPTIONS['days']:
         day = input('Please enter valid day. (all, monday, tuesday, wednesday, thursday, friday, saturday, or sunday)\n')
 
